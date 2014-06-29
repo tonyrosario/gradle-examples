@@ -1,0 +1,19 @@
+apply plugin: 'java'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'junit:junit:4.11'
+}
+
+
+task printDeps() {
+    description "This will print off all the compile time dependencies"
+    doLast {
+       configurations.compile.each {
+           println(it.name)
+       }
+    }
+}
