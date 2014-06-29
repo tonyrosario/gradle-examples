@@ -1,0 +1,17 @@
+configurations {
+    something
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    something 'junit:junit:4.11'
+}
+
+task printDeps() << {
+    configurations.something.each {
+        println(it.name)
+    }
+}
