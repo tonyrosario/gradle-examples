@@ -71,6 +71,6 @@ You can see that we aren't using a plugin here. We created a new configuration c
 
 Something else you may have noticed is how we defined the printDeps task.
 
-    task printDeps() << { ... }
+    task printDeps(description: "Print dependencies") { ... }
 
-The `<<` is shorthand for doLast.
+The `<<` is shorthand for doLast and we defined the description in the parameters. This is another groovyism, its creating a hashmap with the description entry in it.

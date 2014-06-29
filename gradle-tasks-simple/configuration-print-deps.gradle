@@ -10,7 +10,7 @@ dependencies {
     something 'junit:junit:4.11'
 }
 
-task printDeps() << {
+task printDeps(description: "Print dependencies") << {
     configurations.something.each {
         println(it.name)
     }
